@@ -6,6 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.MainActivity">
 
+    <!-- Crear una ToolBar -->
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/primaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_gravity="center"
+            android:textColor="@color/secondary"
+            android:textStyle="bold"
+            android:fontFamily="@font/dancing"
+            android:textSize="30sp"
+            />
+
+
+    </FrameLayout>
+
     <!-- Agregar fragments al main activity-->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
@@ -14,7 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:defaultNavHost = "true"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
