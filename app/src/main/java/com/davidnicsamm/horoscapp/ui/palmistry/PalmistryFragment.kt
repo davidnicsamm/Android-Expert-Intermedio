@@ -7,8 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.davidnicsamm.horoscapp.R
 import com.davidnicsamm.horoscapp.databinding.FragmentPalmistryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+// Para recibir elementos injectados
+@AndroidEntryPoint
 class PalmistryFragment : Fragment() {
 
     private var _binding: FragmentPalmistryBinding? = null
